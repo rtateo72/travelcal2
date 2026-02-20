@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --coral: #ff385c;
+  --coral-dark: #e31c5f;
+  --sand: #f7f0e8;
+  --sand-dark: #e8ddc9;
+  --charcoal: #222222;
+  --gray-soft: #717171;
+  --border: #dddddd;
+  --white: #ffffff;
+  --green: #008a05;
+  --amber: #c47d00;
+  --red: #c13515;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--sand);
+  color: var(--charcoal);
+  min-height: 100vh;
+}
+
+.status-free {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.status-tentative {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+  color: #856404;
+}
+
+.status-busy {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.status-none {
+  background-color: #ffffff;
+  border-color: #dddddd;
+  color: #717171;
+}
+
+.overlay-all-free {
+  background-color: rgba(40, 167, 69, 0.18);
+}
+
+.overlay-some-tentative {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+.overlay-some-busy {
+  background-color: rgba(220, 53, 69, 0.18);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.day-cell {
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.day-cell:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: relative;
+}
+
+.day-cell:active {
+  transform: scale(0.97);
+}
