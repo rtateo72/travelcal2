@@ -413,7 +413,7 @@ export default function TripClient({
 
         {showSidePanel && (
           <aside className="w-full lg:w-64 flex-shrink-0">
-            <div className="bg-white rounded-2xl border border-sand-200 p-5 sticky top-20">
+<div className="bg-white rounded-2xl border border-sand-200 p-5 lg:sticky lg:top-20">
               <h3 className="font-display font-bold text-base text-gray-900 mb-4">
                 Crew ({allParticipants.length})
               </h3>
