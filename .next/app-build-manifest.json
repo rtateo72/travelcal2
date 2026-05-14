@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/trip/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/trip/[id]/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -21,10 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/dashboard/page.js"
     ],
-    "/trip/[id]/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/trip/[id]/page.js"
+      "static/chunks/app/page.js"
     ]
   }
 }

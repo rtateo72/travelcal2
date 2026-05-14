@@ -351,11 +351,20 @@ export default function TripClient({
                       >
                         <span className="text-xs font-bold mb-0.5">{format(day, "d")}</span>
 <div className="flex flex-wrap justify-center gap-0.5">
-  {dateBreakdown(dateStr).map(({ profile, status }) => (
-    <span key={profile.id} className="text-xs leading-none">
-      {STATUS_CONFIG[status].icon}
-    </span>
-  ))}
+  {dateBreakdown(dateStr)
+    .filter(({ status }) => status !== "none")
+    .map(({ profile, status }) => (
+      <div
+        key={profile.id}
+        className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold ${
+          status === "free" ? "bg-green-400 text-white" :
+          status === "tentative" ? "bg-amber-400 text-white" :
+          "bg-red-400 text-white"
+        }`}
+      >
+        {(profile.full_name ?? profile.email ?? "?")[0].toUpperCase()}
+      </div>
+    ))}
 </div>
 
                         {overlay !== "none" && overlay !== myS && (
