@@ -286,8 +286,8 @@ export default function TripClient({
         </div>
       </nav>
 
-      <div className="flex flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 gap-6">
-        <div className="flex-1 min-w-0">
+<div className="flex flex-col-reverse lg:flex-row flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 gap-6">
+          <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-4 mb-5 text-sm">
             <span className="font-semibold text-gray-700">Your availability:</span>
             {(["free", "tentative", "busy", "none"] as StatusCycle[]).map((s) => (
@@ -412,7 +412,7 @@ export default function TripClient({
         </div>
 
         {showSidePanel && (
-          <aside className="w-64 flex-shrink-0">
+          <aside className="w-full lg:w-64 flex-shrink-0">
             <div className="bg-white rounded-2xl border border-sand-200 p-5 sticky top-20">
               <h3 className="font-display font-bold text-base text-gray-900 mb-4">
                 Crew ({allParticipants.length})
